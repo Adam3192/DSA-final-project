@@ -34,20 +34,23 @@ const mergeSort = arr => {
 };
 
 const nums = [5, 7, 2, 4, 9, 6];
+const nums2 = [5, 7, 10, 2, 4, 9, 6];
 
 const numArray = mergeSort(nums);
+const numArray2 = mergeSort(nums2);
 
 function median(array) {
   let length = array.length;
 
   if(length % 2 == 1) {
     // length is odd
-    console.log(array[(length/2) - .5]);
     return array[(length/2) - .5]
   }
 
   else {
-    console.log((nums[length/2] + nums[(length/2) - 1]) / 2);
-    return (nums[length/2] + nums[(length/2) - 1]) / 2
+    return (array[length/2] + array[(length/2) - 1]) / 2
   }
 }
+
+console.log(`problem #1 answer is ${median(numArray)}`);
+console.log(`problem #2 answer is ${median(numArray2)}`);
