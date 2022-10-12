@@ -47,7 +47,7 @@ function median(array) {
   }
 
   else {
-    console.log((nums[lenth/2] + nums[(length/2) - 1]) / 2);
+    console.log((nums[length/2] + nums[(length/2) - 1]) / 2);
     return (nums[length/2] + nums[(length/2) - 1]) / 2
   }
 }
