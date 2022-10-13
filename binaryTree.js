@@ -12,6 +12,7 @@ class BST {
  constructor() {
    this.root = null;
  }
+
  add(data) {
    const node = this.root;
    if (node === null) {
@@ -40,6 +41,7 @@ class BST {
      return searchTree(node);
    }
  }
+
  findMin() {
    let current = this.root;
    while (current.left !== null) {
@@ -47,6 +49,7 @@ class BST {
    }
    return current.data;
  }
+
  findMax() {
    let current = this.root;
    while (current.right !== null) {
@@ -54,6 +57,7 @@ class BST {
    }
    return current.data;
  }
+
  find(data) {
    let current = this.root;
    while (current.data !== data) {
@@ -68,6 +72,7 @@ class BST {
    }
    return current;
  }
+
  isPresent(data) {
    let current = this.root;
    while (current) {
@@ -82,6 +87,7 @@ class BST {
    }
    return false;
  }
+
  remove(data) {
    const removeNode = function(node, data) {
      if (node == null) {
@@ -118,9 +124,11 @@ class BST {
    }
    this.root = removeNode(this.root, data);
  }
+ 
  isBalanced() {
    return (this.findMinHeight() >= this.findMaxHeight() - 1)
  }
+
  findMinHeight(node = this.root) {
      if (node == null) {
          return -1;
@@ -133,6 +141,7 @@ class BST {
          return right + 1;
      };
  }
+
  findMaxHeight(node = this.root) {
      if (node == null) {
          return -1;
@@ -145,6 +154,7 @@ class BST {
          return right + 1;
      };
  }
+
  inOrder() {
    if (this.root == null) {
      return null;
@@ -159,6 +169,7 @@ class BST {
      return result;
    };
  }
+
  preOrder() {
    if (this.root == null) {
      return null;
@@ -173,6 +184,7 @@ class BST {
      return result;
    };
  }
+ 
  postOrder() {
    if (this.root == null) {
      return null;
