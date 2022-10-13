@@ -115,4 +115,4 @@ Node {
 
 // The desired output of example is 4, as there is a height of 4 in this binary tree
 
-console.log("The height of the binary tree is: " + treeHeight(root2));
+console.log("The height of the binary tree is: " + treeHeight(root));

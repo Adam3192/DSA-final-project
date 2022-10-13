@@ -16,8 +16,7 @@ class Node
 	/* Compute the "maxDepth" of a tree -- the number of
 	nodes along the longest path from the root node
 	down to the farthest leaf node.*/
-	function maxDepth(node)
-	{
+	function maxDepth(node) {
 		if (node == null)
 			return 0;
 		else
