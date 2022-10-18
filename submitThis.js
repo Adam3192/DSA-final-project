@@ -1,4 +1,3 @@
-// Node class - a class to store a binary tree node
 class Node {
     constructor(data)
     {
@@ -52,6 +51,7 @@ root.right.left = new Node(14);
 root.right.left.left = new Node(4);
 root.right.left.right = new Node(6);
 
+// Another Binary tree test
 let root2 = new Node(1);
 root2.left = new Node(8);
 root2.right = new Node(17);
