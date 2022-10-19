@@ -1,42 +1,44 @@
 class Node {
-    constructor(data)
-    {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-     Node(data) {
-        this.key = data;
-    }
+ constructor(data)
+ {
+     this.data = data;
+     this.left = null;
+     this.right = null;
+ }
+  Node(data) {
+     this.key = data;
+ }
 }
 
 function treeHeight(root) {
- 
- if (root == null)
-  return 0;
 
- let q = [];
+if (root == null)
+return 0;
 
- q.push(root);
- let height = 0;
+let q = [];
 
- while (1 == 1)
- {
-  let nodeCount = q.length;
-  if (nodeCount == 0)
-   return height;
-  height++;
+q.push(root);
+let height = 0;
 
-  while (nodeCount > 0)
-  {
-   let newnode = q.shift();
-   if (newnode.left != null)
-    q.push(newnode.left);
-   if (newnode.right != null)
-    q.push(newnode.right);
-   nodeCount--;
-  }
- }
+while (1 == 1) {
+let nodesAtThisLevel = q.length;
+
+if (nodesAtThisLevel == 0) {
+  return height;
+}
+
+height++;
+
+while (nodesAtThisLevel > 0) {
+let currentNode = q.shift();
+
+if (currentNode.left != null)
+ q.push(currentNode.left);
+if (currentNode.right != null)
+ q.push(currentNode.right);
+nodesAtThisLevel--; // paint the square
+}
+}
 }
 
 // Inserting nodes to the Binary Tree
@@ -65,4 +67,6 @@ root2.right.left.right = new Node(6);
 root2.right.left.left.right = new Node(2);
 root2.right.left.left.right.left = new Node(7);
 
-console.log("The height of the binary tree is: " + treeHeight(root));
+console.log("The height of the binary tree is: " + treeHeight(root2));
+
+treeHeight(root);
