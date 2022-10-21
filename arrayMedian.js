@@ -39,6 +39,10 @@ function merge(arr1, arr2) {
 }
 
 const mergeSort = arr => {
+ if(arr.some(isNaN)) {
+  return console.log('all inputs must be numbers')
+ }
+
  if (arr.length <= 1) return arr;
 
  let mid = Math.floor(arr.length / 2), 
@@ -50,9 +54,14 @@ const mergeSort = arr => {
 
 const nums = [5, 7, 2, 4, 9, 6];
 const nums2 = [5, 7, 10, 2, 4, 9, 6];
+const nums3 = [5, 22, 10, 2, 77, 9, 105];
+const test1 = ['A', 7, 10, 2, 4, 'B', 6];
+const test2 = [5, 'C', 10, 'B', 4, 9, 6];
+const test3 = [5, 'C', 10, 'B', 4, 9, 'J'];
 
 const numArray = mergeSort(nums);
 const numArray2 = mergeSort(nums2);
+const numArray3 = mergeSort(nums3);
 
 function median(array) {
   let length = array.length;
@@ -69,3 +78,10 @@ function median(array) {
 
 console.log(`The median array element is ${median(numArray)}`);
 console.log(`The median array element is ${median(numArray2)}`);
+console.log(`The median array element is ${median(numArray3)}`);
+
+console.log('***************Testing with bad input*****************');
+
+mergeSort(test1);
+mergeSort(test2);
+mergeSort(test3);

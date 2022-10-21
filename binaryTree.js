@@ -38,9 +38,8 @@ class Node {
 }
 
 function treeHeight(root) {
- 
  if (root == null)
-  return 0;
+  return console.log('height is zero, root value can not be null');
 
  let q = [];
 
@@ -65,7 +64,7 @@ function treeHeight(root) {
  }
 }
 
-// Inserting nodes to the Binary Tree
+// Inserting nodes to the Binary Tree - height of tree is 4
 let root = new Node(1);
 root.left = new Node(8);
 root.right = new Node(17);
@@ -77,7 +76,7 @@ root.right.left = new Node(14);
 root.right.left.left = new Node(4);
 root.right.left.right = new Node(6);
 
-// Another Binary tree test
+// Another Binary tree test - height of tree is 6
 let root2 = new Node(1);
 root2.left = new Node(8);
 root2.right = new Node(17);
@@ -91,4 +90,16 @@ root2.right.left.right = new Node(6);
 root2.right.left.left.right = new Node(2);
 root2.right.left.left.right.left = new Node(7);
 
+// Another test with only root node - height of tree is 1
+let root3 = new Node(1);
+
+// Test with null passed in for the root value
+let root4 = null;
+
 console.log("The height of the binary tree is: " + treeHeight(root));
+console.log("The height of the binary tree is: " + treeHeight(root2));
+console.log("The height of the binary tree is: " + treeHeight(root3));
+
+console.log('***************Testing with bad input*****************');
+
+treeHeight(root4);
