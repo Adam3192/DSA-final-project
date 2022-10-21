@@ -1,3 +1,10 @@
+/* For this coding solution I chose to use a Breadth-First Search algorithm to find the height of
+the binary tree, I also utilized a queue data structure within my Breadth-First Search algorithm 
+to help me keep track of and manipulate the nodes as I traversed the tree. I believe that this is
+a good solution for this problem because it has a good Big O time complexity of O(n) where n is the 
+number of nodes in the binary tree.
+*/
+
 /* Pseudo-code : 
   1. Check to make sure that the root node is not null.
   2. Initialize an empty array that will work as a queue to keep track of nodes as I traverse
@@ -13,6 +20,9 @@
   9. If current node.left is not equal to null then push it into the queue.
   10.If current node.right is not equal to null then push it into the queue.
   11.Then decrement the variable that is keeping track of the nodes at the current level by 1.
+*/
+
+/* The Big O time and space complexity of my solution for this problem is time complexity = O(n) and space complexity = O(n) where n is the number of nodes in the binary tree.
 */
 
 class Node {
