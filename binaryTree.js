@@ -1,5 +1,18 @@
-/* 
-
+/* Pseudo-code : 
+  1. Check to make sure that the root node is not null.
+  2. Initialize an empty array that will work as a queue to keep track of nodes as I traverse
+     the tree.
+  3. Push the root node into the queue array.
+  4. Initialize a height variable and set it equal to zero.
+  5. Create a while loop that continues looping until all nodes of the tree have been checked.
+  6. Create a variable to keep track of the number of nodes that are in the current level.
+  7. After all nodes at each level of the tree have been visited, increment the height variable
+     by 1.
+  8. While there are nodes at the current level, create a new variable to represent the current 
+     node and set it equal to the node in my queue at index zero of the queue.
+  9. If current node.left is not equal to null then push it into the queue.
+  10.If current node.right is not equal to null then push it into the queue.
+  11.Then decrement the variable that is keeping track of the nodes at the current level by 1.
 */
 
 class Node {
@@ -24,21 +37,20 @@ function treeHeight(root) {
  q.push(root);
  let height = 0;
 
- while (1 == 1)
- {
-  let nodeCount = q.length;
-  if (nodeCount == 0)
+ while (1 == 1) {
+  let nodesAtThisLevel = q.length;
+  if (nodesAtThisLevel == 0)
    return height;
   height++;
 
-  while (nodeCount > 0)
+  while (nodesAtThisLevel > 0)
   {
-   let newnode = q.shift();
-   if (newnode.left != null)
-    q.push(newnode.left);
-   if (newnode.right != null)
-    q.push(newnode.right);
-   nodeCount--;
+   let currentNode = q.shift();
+   if (currentNode.left != null)
+    q.push(currentNode.left);
+   if (currentNode.right != null)
+    q.push(currentNode.right);
+   nodesAtThisLevel--;
   }
  }
 }
