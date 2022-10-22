@@ -1,3 +1,7 @@
+/* Loom video link 
+https://www.loom.com/share/4d1af3475fa249c38c10e827ee24a234
+*/
+
 /* For this coding solution I chose to use a Breadth-First Search algorithm to find the height of
 the binary tree, I also utilized a queue data structure within my Breadth-First Search algorithm 
 to help me keep track of and manipulate the nodes as I traversed the tree. I believe that this is

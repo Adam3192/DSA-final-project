@@ -1,3 +1,7 @@
+/* Loom video link 
+https://www.loom.com/share/4d1af3475fa249c38c10e827ee24a234
+*/
+
 /* For this coding solution I chose to use the Merge Sort algorithm to first sort my array of numbers,
 then I wrote a function call median that just accepts the sorted array as an input and uses some simple math to find the median of the array of numbers, if the length of the array is odd then my function returns the index of the length divided by 2 minus .5, and if the length of the array is even then my function returns the value at the index of the array length divided by 2 plus the array length divided by 2 minus one, then divide this number by two and that will be the correct value for the median. I chose to use the Merge Sort algorithm because it is the fastest sorting algorithm on average, I looked into using the Quick Sort algorithm but it kind of works off of a bit of luck depending on what index is chosen for the pivot whereas Merge Sort will always have the same time complexity of O(n * log(n)).
 */
